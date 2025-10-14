@@ -1,0 +1,32 @@
+/* Import Satoshi from Fontshare */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap');
+
+/* Global Typography */
+body {
+  font-family: 'Satoshi', sans-serif;
+  color: #111827; /* Tailwind gray-900 */
+  background-color: #f9fafb; /* Tailwind gray-50 */
+  letter-spacing: -0.01em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Optional subtle fade-in animation for hero text */
+.hero-text {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriyieCare</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-white/80 backdrop-blur-sm fixed w-full top-0 left-0 z-50 border-b border-gray-100 h-20">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <!-- Brand -->
+        <a href="#" class="flex flex-col leading-tight">
+        <span class="text-2xl font-semibold text-green-700">AfriyieCare</span>
+        <span class="text-base text-gray-600 tracking-tight">Compassionate Home Care</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center space-x-8 text-xl font-medium text-gray-700">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+        <li>
+            <a href="#book"
+            class="bg-green-600 text-white px-5 py-2 rounded-lg text-center hover:opacity-90 transition block">
+            Schedule Appointment
+            </a>
+        </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <!-- Hamburger icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <ul class="flex flex-col space-y-4 py-4 px-6 text-gray-700 font-medium">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+        <li>
+            <a href="#book"
+            class="bg-green-600 text-white px-5 py-2 rounded-lg text-center hover:opacity-90 transition block">
+            Schedule Appointment
+            </a>
+        </li>
+        </ul>
+    </div>
+    </header>
+
+    <script>
+    // Simple JS for mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+    </script>
+
+    <!-- Hero Section -->
+    <section
+    id="home"
+    class="relative min-h-screen flex items-center justify-center text-center text-white"
+    >
+    <!-- Background Image -->
+    <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/Pics/3.jpg');"
+    ></div>
+
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 px-6 max-w-3xl">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+        <span class="text-green-400">Compassionate Care</span>
+        <p>You Can Trust</p>
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-100 mb-8 leading-relaxed">
+        We provide personalized, professional, and compassionate in-home care,
+        ensuring dignity, comfort, and independence for seniors and individuals
+        who need daily support.
+        </p>
+
+        <div class="space-x-4">
+        <a
+            href="#services"
+            class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition"
+        >
+            Schedule Appointment
+        </a>
+        <a
+            href="#contact"
+            class="inline-block border border-green-400 text-green-400 hover:bg-green-400 hover:text-white px-8 py-3 rounded-lg font-medium transition"
+        >
+            Contact Us
+        </a>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Hero Section -->
+    <!-- <section class="min-h-screen flex items-center pt-20 bg-green-50 py-20">
+      <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between"> -->
+        
+        <!-- Left: Hero Text -->
+        <!-- <div class="md:w-3/4 text-center md:text-left space-y-6 hero-text md:mr-24">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white-500">
+            <span class="text-green-800">Compassionate Care</span> You Can Trust
+            </h1> -->
+
+          <!-- <p class="text-gray-700 text-2xl font-medium leading-relaxed">
+            We provide personalized, professional, and compassionate in-home care, ensuring dignity, comfort, and independence for seniors and individuals who need daily support.
+          </p>
+          <div class="space-x-4">
+            <a href="#services" 
+               class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-medium tracking-wide">
+              Schedule Appointment
+            </a>
+            <a href="#contact" 
+               class="inline-block border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition font-medium tracking-wide">
+              Contact Us
+            </a>
+          </div>
+        </div> -->
+
+        <!-- Right: Hero Image -->
+        <!-- <div class="md:w-4/5 mt-10 md:mt-0">
+          <img 
+            src="/Pics/3.jpg" 
+            alt="Caregiver assisting elderly person"
+            class="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-white py-16">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+
+        <!-- Left: Image -->
+        <div class="md:w-3/5">
+        <img 
+            src="/Pics/2.jpg" 
+            alt="Caregiver smiling with elderly patient" 
+            class="rounded-lg shadow-lg w-full h-auto object-cover"
+        />
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="md:w-1/2 text-center md:text-left space-y-6">
+        <h2 class="text-3xl md:text-4xl font-semibold text-black-700">
+            About AfriyieCare
+        </h2>
+        <p class="text-gray-700 font-medium text-lg leading-relaxed">
+            At AfriyieCare, we believe that everyone deserves to age gracefully, recover safely, and live with dignity at the place they call home.  
+            Our name, inspired by the values of compassion and respect, reflects our commitment to providing reliable, culturally sensitive care that truly makes a difference.
+        </p>
+
+        <!-- Vision -->
+        <div>
+            <h3 class="text-xl font-semibold text-black-500 mb-2">Our Vision</h3>
+            <p class="text-gray-700 font-medium text-lg leading-relaxed">
+            To be a trusted partner in compassionate home care — empowering individuals to live with dignity, comfort, and independence in the place they call home.
+            </p>
+        </div>
+
+        <!-- Mission -->
+        <div>
+            <h3 class="text-xl font-semibold text-black-500 mb-2">Our Mission</h3>
+            <p class="text-gray-700 font-medium text-lg leading-relaxed">
+            Our mission is to deliver exceptional, person-centered care that supports the physical, emotional, and social well-being of every client.  
+            We strive to provide safe, reliable, and compassionate home care through empathy, integrity, and professional excellence — giving families peace of mind and clients the freedom to thrive at home.
+            </p>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- Our Services Section -->
+    <section id="services" class="bg-green-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-black-900 tracking-tight">
+        Our Services
+        </h2>
+        <p class="text-gray-700 max-w-4xl mx-auto mb-12 text-2xl font-medium leading-relaxed">
+        We offer a full range of personalized home care services designed to promote comfort, safety, and peace of mind,
+        whether for short-term recovery or long-term support.
+        </p>
+
+        <!-- Service Cards Grid -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 px-4">
+
+        <!-- 1. Elderly Care -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/2.jpg" alt="Elderly care assistance">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Elderly Care</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Compassionate care that supports seniors with comfort, dignity, and personalized attention.
+            </p>
+            </div>
+        </div>
+
+        <!-- 2. Daily Living Assistance -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/8.jpg" alt="Daily living assistance">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Daily Living Assistance</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Help with bathing, dressing, mobility, toileting, and meal preparation to maintain independence.
+            </p>
+            </div>
+        </div>
+
+        <!-- 3. Medication Management -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/7.jpg" alt="Medication management">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Medication Management</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Timely reminders and monitoring to ensure medications are taken safely and consistently.
+            </p>
+            </div>
+        </div>
+
+        <!-- 4. Dementia & Memory Care -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/5.jpg" alt="Dementia care">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Dementia & Memory Care</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Gentle, structured care for individuals with Alzheimer’s or other memory challenges.
+            </p>
+            </div>
+        </div>
+
+        <!-- 5. End-of-Life & Hospice Care -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/4.jpg" alt="Hospice and end-of-life care">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">End-of-Life & Hospice Care</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Compassionate comfort care for clients and families navigating life’s final stages.
+            </p>
+            </div>
+        </div>
+
+        <!-- 6. Respite Care -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/6.jpg" alt="Respite care service">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Respite Care</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Temporary care services allowing family caregivers to rest and recharge with peace of mind.
+            </p>
+            </div>
+        </div>
+
+        <!-- 7. Babysitting & Child Care -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/9.jpg" alt="Babysitting and child care">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">Babysitting & Child Care</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Reliable and nurturing child care that ensures your little ones are safe, engaged, and cared for.
+            </p>
+            </div>
+        </div>
+
+        <!-- 8. General Cleaning -->
+        <div class="relative aspect-square w-full max-w-sm rounded-lg overflow-hidden group cursor-pointer mx-auto">
+            <img class="aspect-square object-cover transition-transform duration-500 ease-out group-hover:scale-105" 
+                src="/Pics/10.jpg" alt="General cleaning service">
+            <div class="absolute inset-0 bg-black/60 transition-all duration-500 ease-in-out group-hover:bg-black/70"></div>
+            <div class="absolute bottom-0 p-5 text-white text-left">
+            <h3 class="text-xl md:text-2xl font-semibold mb-1 drop-shadow-lg">General Cleaning</h3>
+            <p class="text-sm leading-snug drop-shadow-lg font-medium">
+                Complete home cleaning services designed to create a comfortable, hygienic, and stress-free environment.
+            </p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Why Choose AfriyieCare Section -->
+    <section id="why" class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+        
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-black-800 tracking-tight">
+        Why Choose AfriyieCare?
+        </h2>
+
+        <!--Column Grid -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- 1. Compassionate & Professional Caregivers -->
+        <div class="bg-green-700 text-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+            <!-- Icon -->
+            <div class="mb-4 flex justify-center">
+            <img src="/Icons/wellbeing.svg" alt="Caregiver Icon" class="w-14 h-14 object-contain" />
+            </div>
+            <!-- Heading -->
+            <h3 class="text-xl font-semibold mb-3">Compassionate & Professional Caregivers</h3>
+            <p class="text-gray-100 text-xl leading-relaxed">
+            Our caregivers are trained, experienced, and genuinely care about the well-being of every individual they serve.
+            </p>
+        </div>
+
+        <!-- 2. Customized Care Plans -->
+        <div class="bg-green-700 text-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="mb-4 flex justify-center">
+            <img src="/Icons/list.svg" alt="Care Plan Icon" class="w-14 h-14 object-contain" />
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Customized Care Plans</h3>
+            <p class="text-gray-100 text-xl leading-relaxed">
+            Every client’s needs are unique. We create personalized care plans that fit their lifestyle, health, and goals.
+            </p>
+        </div>
+
+        <!-- 3. Safe and Reliable Services -->
+        <div class="bg-green-700 text-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="mb-4 flex justify-center">
+            <img src="/Icons/reliable.svg" alt="Safety Icon" class="w-14 h-14 object-contain" />
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Safe & Reliable Services</h3>
+            <p class="text-gray-100 text-xl leading-relaxed">
+            We maintain the highest standards of safety and reliability to give clients and families complete peace of mind.
+            </p>
+        </div>
+
+        <!-- 4. Commitment to Dignity and Respect -->
+        <div class="bg-green-700 text-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="mb-4 flex justify-center">
+            <img src="/Icons/commitment.svg" alt="Dignity Icon" class="w-14 h-14 object-contain" />
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Commitment to Dignity & Respect</h3>
+            <p class="text-gray-100 text-xl leading-relaxed">
+            We treat every client with kindness, dignity, and respect — valuing their individuality and personal choices.
+            </p>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-green-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-black-800 tracking-tight">
+        What Our Clients Say
+        </h2>
+        <p class="text-gray-600 max-w-4xl mx-auto mb-12 text-2xl leading-relaxed font-medium">
+        Hear from families and individuals who have trusted AfriyieCare to provide compassionate, reliable, and professional home care services.
+        </p>
+
+        <!-- Testimonials Grid -->
+        <div class="grid gap-8 md:grid-cols-3">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl p-8 border border-green-500 transition">
+            <div class="flex justify-center mb-4">
+            <img src="/Pics/face1.jpg" alt="Client Photo" class="w-16 h-16 rounded-full object-cover" />
+            </div>
+            <p class="text-gray-700 italic mb-4 font-medium">
+            “AfriyieCare has been a blessing for our family. Their caregivers are kind, respectful, and treat our mother like family. We finally have peace of mind knowing she’s in good hands.”
+            </p>
+            <h4 class="text-green-700 font-semibold">— Patricia W.</h4>
+            <span class="text-base font-medium text-gray-700">Client’s Daughter</span>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-xl p-8 border border-green-500 transition">
+            <div class="flex justify-center mb-4">
+            <img src="/Pics/face2.jpg" alt="Client Photo" class="w-16 h-16 rounded-full object-cover" />
+            </div>
+            <p class="text-gray-700 italic mb-4 font-medium">
+            “Barbara and her staff are incredibly professional and attentive. They supported my father through recovery with patience and genuine compassion. I couldn’t have asked for better care.”
+            </p>
+            <h4 class="text-green-700 font-semibold">— Michael R.</h4>
+            <span class="text-base font-medium text-gray-700">Client’s Son</span>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-xl p-8 border border-green-500 transition">
+            <div class="flex justify-center mb-4 font-medium">
+            <img src="/Pics/face3.jpg" alt="Client Photo" class="w-16 h-16 rounded-full object-cover" />
+            </div>
+            <p class="text-gray-700 italic mb-4 font-medium">
+            “Barbara went above and beyond for my grandmother. From medication reminders to companionship, AfriyieCare truly delivers care with heart.”
+            </p>
+            <h4 class="text-green-700 font-semibold">— Sarah K.</h4>
+            <span class="text-base font-medium text-gray-700">Client’s Granddaughter</span>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-20">
+    <div class="container mx-auto px-6">
+        
+        <!-- Heading -->
+        <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-black-800 mb-4">
+            Get in Touch
+        </h2>
+        <p class="text-gray-600 max-w-4xl mx-auto mb-12 text-2xl leading-relaxed font-medium">
+            Have questions about our services, pricing, or scheduling?  
+            We’d love to hear from you. Fill out the form below and we’ll respond promptly.
+        </p>
+        </div>
+
+        <!-- Contact Form Container -->
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Form -->
+        <form
+            action="https://formspree.io/f/mwkyprde"
+            method="POST"
+            class="bg-white-50 p-8 rounded-xl border border-gray-300"
+            
+        >
+            <div class="grid gap-6">
+            
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Enter your full name"
+                />
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                <input
+                type="email"
+                id="email"
+                name="_replyto"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Enter your email"
+                />
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="(555) 555-1234"
+                />
+            </div>
+
+            <!-- Message -->
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="How can we help you?"
+                ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="w-full bg-green-700 hover:bg-green-800 text-white py-3 rounded-lg font-semibold transition"
+            >
+                Send Message
+            </button>
+
+            </div>
+        </form>
+
+        <!-- Right: Contact Info -->
+        <div class="space-y-6 text-gray-700 md:pl-8">
+            <h3 class="text-2xl font-semibold text-black-800 mb-4">Contact Details</h3>
+            <p>
+            <strong>Phone:</strong> <a href="tel:+15855551234" class="text-xl text-black-700 hover:underline">+1 (585) 555-1234</a>
+            </p>
+            <p>
+            <strong>Email:</strong> <a href="mailto:info@afriyiecare.com" class="text-xl text-black-700 hover:underline">info@afriyiecare.com</a>
+            </p>
+            <p>
+            <strong>Location:</strong> <span class="text-xl text-black-700">Rochester, New York, USA</span>
+            </p>
+            <div class="flex space-x-4 mt-6">
+            <a href="https://instagram.com" class="hover:text-green-400 transition">
+            <img src="/Icons/instagram.svg" alt="Instragram Icon" class="w-12 h-12 object-contain" />
+            </a>
+            <a href="https://facebook.com" class="hover:text-green-400 transition">
+            <img src="/Icons/facebook.svg" alt="Facebook Icon" class="w-12 h-12 object-contain" />
+            </a>
+            <a href="https://linkedin.com" class="hover:text-green-400 transition">
+            <img src="/Icons/linkedin.svg" alt="LinkedIn Icon" class="w-12 h-12 object-contain" />
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-gray-100 pt-16 pb-8">
+    <div class="container mx-auto px-6 grid gap-12 md:grid-cols-4">
+
+        <!-- Column 1: Brand -->
+        <div>
+        <h3 class="text-2xl font-semibold mb-2 text-white">AfriyieCare Services LLC</h3>
+        <p class="text-white-300 text-base mb-4">
+            Compassionate Home Care
+        </p>
+        <p class="text-white-400 text-xl leading-relaxed">
+            Providing personalized, professional, and reliable in-home care across Rochester, NY.
+        </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+        <h4 class="text-2xl font-semibold mb-4 text-white">Quick Links</h4>
+        <ul class="text-base space-y-2 text-white-300">
+            <li><a href="#home" class="text-xl hover:text-white transition">Home</a></li>
+            <li><a href="#services" class="text-xl hover:text-white transition">Services</a></li>
+            <li><a href="#about" class="text-xl hover:text-white transition">About</a></li>
+            <li><a href="#contact" class="text-xl hover:text-white transition">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div>
+        <h4 class="text-2xl font-semibold mb-4 text-white">Contact Us</h4>
+        <ul class="space-y-4 text-white-300">
+            <li class="flex items-center gap-2">
+            <img src="/Icons/mail.svg" alt="Mail Icon" class="w-6 h-6 object-contain" />
+            <a href="mailto:info@afriyiecare.com" class="text-xl hover:text-white transition">info@afriyiecare.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+            <img src="/Icons/phone.svg" alt="Phone Icon" class="w-6 h-6 object-contain" />
+            <a href="tel:+1585XXXXXXX" class="text-xl hover:text-white transition">+1 (585) XXX-XXXX</a>
+            </li>
+            <li class="flex items-center gap-2">
+            <img src="/Icons/location.svg" alt="Location Icon" class="w-6 h-6 object-contain" />
+            <span class="text-xl">Rochester, NY</span>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Column 4: Social Media -->
+        <div>
+        <h4 class="text-2xl font-semibold mb-4 text-white">Follow Us</h4>
+        <div class="flex space-x-4">
+            <a href="https://instagram.com" class="hover:text-green-400 transition">
+            <img src="/Icons/instagram.svg" alt="Instragram Icon" class="w-12 h-12 object-contain" />
+            </a>
+            <a href="https://facebook.com" class="hover:text-green-400 transition">
+            <img src="/Icons/facebook.svg" alt="Facebook Icon" class="w-12 h-12 object-contain" />
+            </a>
+            <a href="https://linkedin.com" class="hover:text-green-400 transition">
+            <img src="/Icons/linkedin.svg" alt="LinkedIn Icon" class="w-12 h-12 object-contain" />
+            </a>
+        </div>
+        </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-green-700 mt-12 pt-6 text-center text-white-400 text-xl">
+        <p>&copy; <span id="year"></span> AfriyieCare Services LLC. All rights reserved.</p>
+    </div>
+    </footer>
+
+    <script>
+    // Auto update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+
+
+  </body>
+</html>
